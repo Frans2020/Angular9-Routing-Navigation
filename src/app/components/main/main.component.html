@@ -1,0 +1,19 @@
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1" [routerLink]="['/Main/Employees']"><b>Angular 9</b></span>
+    <ul class='nav nav-pills'>
+        <li><a class='nav-link' > <b>Hello! {{username}}</b></a></li> 
+        </ul>
+  </nav> 
+<br>
+<div class="container"> 
+    <mat-drawer-container class="example-container">
+        <mat-drawer class="sidemenu"  mode="side" opened> 
+            <ul>
+                <li style="color: crimson;" (click)="Option('Employees')"><b>Employees</b></li>
+                <li style="color: orange;" (click)="Option('Careers')"><b>Careers</b></li>
+                <li style="color: palegreen;" (click)="Option('News')"><b>News</b></li>
+            </ul>
+        </mat-drawer>
+        <mat-drawer-content> <router-outlet></router-outlet> </mat-drawer-content>
+      </mat-drawer-container> 
+</div>
